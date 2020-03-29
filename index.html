@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bojan Vujnovic</title>
+	<link rel="icon" href="/images/favicon.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<ol id="menu">
+							<li><a onclick="showPage(home_text)"><i class="fas fa-home"></i> Home</a></li>
+							<li><a onclick="showPage(about);writeText();playAnim();"><i class="far fa-address-card"></i> About</a></li>
+							<li><a onclick="showPage(education)"><i class="fas fa-laptop-code"></i> Education</a></li>
+							<li><a onclick="showPage(skills)"><i class="fas fa-tools"></i> Skills</a></li>
+							<li><a onclick="showPage(projects)"><i class="fab fa-r-project"></i> Projects</a></li>
+							<li><a onclick="showPage(contact)"><i class="fas fa-reply"></i> Contact</a></li>
+						</ol>
+				</div>
+					<img src="images/my-logo.jpg" id="my-logo">
+					<span id="hamburger" onclick="openNav()">&#9776; </span>
+			</nav>
+		</header>
+		<section>
+			<article id="home_text" class="pages" >
+						<span><h2>I'am Bojan,</h2>
+						<h3>junior Web developer</h3></span>
+			</article>
+			<article id="about" class="pages">
+						<img src="images/bojan.png"
+								id="my_image">
+						<h2 id="title">ABOUT ME</h2>
+						<p id="about_text"></p>
+			</article>
+			<article id="education" class="pages">
+						<h2 id="title">EDUCATION</h2>
+						<div>
+								<ul style="float:left"><h3 id="titleEducations">Courses</h3>
+									<li><a  href="https://see.stanford.edu/Course/CS106A">Programming
+										Methodology</a> </li>
+									<li><a	href="https://www.udemy.com/course/learning-data-structures-and-algorithms/">Data
+										structure and algorithms</a></li>
+									<li><a	href="https://www.udemy.com/course/hibernate-and-jpa-fundamentals/">Java
+										Persistence Hibernate and JPA Fundamentals</a> </li>
+									<li><a	href="https://www.udemy.com/course/jsp-tutorial/">JSP,
+										Servlets and JDBC for Beginners Build a Database App</a> </li>
+									<li><a	href="https://www.udemy.com/course/hibernate-jpa-tutorial-for-beginners-in-100-steps/">Master
+										Hibernate and JPA with Spring Boot in 100 Steps</a> </li>
+									<li><a	href="https://www.udemy.com/course/spring-hibernate-tutorial/">
+										Spring & Hibernate for Beginners (includes Spring Boot) </a> </li>
+								</ul>
+							
+								<ul style="float:right"><h3 id="titleEducations">Books </h3>
+									<li><a	href="https://www.amazon.com/Core-Java-1-1-1-Fundamentals/dp/0137669577">Core
+										Java-Cay S.Horstmann -Gary Cornell</a> </li>
+									<li><a	href="https://www.knjizara.com/Algoritmi-i-strukture-podataka-Milo-Tomasevic-122736">Algorithm
+										and data structure-Milo Tomasevic</a></li>
+								</ul>
+						</div>
+			</article>
+			<article id="skills" class="pages">
+						<h2 id="title">SKILLS</h2>
+						<h3 id="titleYear">0 &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; 
+										   1 &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  
+										   2 &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  
+										   3 &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;
+										   4+ years 
+						</h3>
+						<p style="color:#FF0000" id="titleLanguage">Java</p>			
+							<div class="container">
+								<div class="skills java"></div>
+							</div>
+
+						<p style="color: #F29111" id="titleLanguage">Mysql</p>	
+							<div class="container">
+								<div class="skills mysql"></div>
+							</div>
+						<p style="color:#696969" id="titleLanguage">Hibernate</p>
+							<div class="container">
+								<div class="skills hibernate"></div>
+							</div>
+						<p style="color:#32CD32" id="titleLanguage">Spring</p>
+							<div class="container">
+								<div class="skills spring"></div>
+							</div>
+						<p style="color:#E44D26" id="titleLanguage">Html</p>
+							<div class="container">
+								<div class="skills html"></div>
+							</div>
+						<p style="color:#1E90FF" id="titleLanguage">Css</p>
+							<div class="container">
+								<div class="skills css"></div>
+							</div>
+						<p style="color:#FFFF00" id="titleLanguage">Javascript</p>
+							<div class="container">
+								<div class="skills javascript"></div>
+							</div>
+			</article>
+			
+		    <article id="projects" class="pages">
+		        
+		        <p ><img id="lib" src="images/imagine.jpg"
+							 onclick="location.replace('http://imagine-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com')" align="bottom"><br>Imagine number</p>
+		        
+		        <p ><img id="lib" src="images/cor.jpg"
+							 onclick="location.replace('http://corona-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com')" align="bottom"><br>Corona virus</p>
+		   
+				<p ><img id="lib" src="images/lib.jpg"
+							 onclick="location.replace('http://library-env.eba-i6btkwrd.eu-west-2.elasticbeanstalk.com')" align="bottom"><br>Library</p>
+				
+				<p >	<img id="lib" src="images/image.jpg"
+							 onclick="location.replace('https://vujaaa88.000webhostapp.com')" align="bottom"><br>First Web site</p>
+			</article>
+			<article id="contact" class="pages">
+					<h2 id="title">CONTACT</h2>
+						<span id="mobile"> Mobile &nbsp;  &nbsp;  &nbsp; <a href="tel:+38765-728-796"><i class="fas fa-phone-volume"></i></a></span>
+						<span id="online"> Online &nbsp;  &nbsp;  &nbsp; <a href="https://www.facebook.com/bojan.vujnovic.3"><i class="fab fa-facebook"></i></a></span>
+						<span id="mail"> Mail 	  &nbsp;  &nbsp;  &nbsp; <a href="mailto:vujaaa88@hotmail.com"><i class="far fa-envelope"></i></a></span>
+			</article>
+		</section>
+	<script>
+	
+function writeText() {
+	document.getElementById("about_text").innerText = "";
+	i=0;
+	speed = 50;
+		if(document.getElementById("about").style.width === "70vw"){
+			typeWriter();
+		} 
+}	
+
+var txt = "Hi, My name is Bojan Vujnovic, I am junior web developer and \
+I started learning two years ago.\
+First I started learning basics of java programming language.\
+Long time after that I realized that I was ready for the next step.\
+I started learning algorithms and data structures. \
+After a while, databases came up. The last and current thing I'm learning is spring framework.\
+It is my desire to soon find a practice where I can have a mentor to advise and guide me. \
+Here are links to all the books and courses I have attended."
+var i = 0;
+var speed = 50;
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("about_text").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+$(window).resize(function() {
+	if($(window).width() > 600){
+	document.getElementsByClassName("closebtn")[0].style.display = "none";
+	document.getElementById("hamburger").style.display = "none";
+	openNav();
+} else {
+document.getElementsByClassName("closebtn")[0].style.display = "block";
+document.getElementById("hamburger").style.display = "block";
+closeNav();
+}
+});
+if($(window).width() > 600){
+document.getElementsByClassName("closebtn")[0].style.display = "none";
+document.getElementById("hamburger").style.display = "none";
+	openNav();
+} 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "30vw";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function showPage(id) {
+	var days = document.getElementsByClassName("pages");
+	for( var i = 0; i < days.length; i++ ){
+		if(id===days[i]){
+    days[i].style.width = "70vw";   
+		} else {
+			days[i].style.width = "0"; 
+		}	
+	}
+}
+function playAnim(){
+  var el = document.getElementById('my_image');
+  el.style.animation = 'none';
+  el.offsetHeight; /* trigger reflow */
+  el.style.animation = null; 
+}
+
+window.onload = function () {
+  document.getElementById("home_text").style.width = "70vw";
+}
+	</script>
+	</body>
+</html>
