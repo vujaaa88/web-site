@@ -55,7 +55,7 @@ ul li a:hover{
 }
 
 li a:hover{
-	border-bottom:2px solid red;
+	border-bottom:0.2vw solid red;
 }
 span h2:hover{
 	color:#000000;
@@ -298,7 +298,7 @@ span h3:hover{
     100% {opacity:1;}
 }
 
-/*Third animation for rotate the logo from the header*/
+/*Third animation for rotate the logo */
 @keyframes role_logo { 
 		100% { 
 		transform:rotate(360deg); 
