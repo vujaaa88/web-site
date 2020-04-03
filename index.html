@@ -10,6 +10,79 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	</head>
+	<script>
+function writeText() {
+	document.getElementById("about_text").innerText = "";
+	i=0;
+	speed = 50;
+		if(document.getElementById("about").style.width === "70vw"){
+			typeWriter();
+		} 
+}		
+
+const txt = "Hi, My name is Bojan Vujnovic, I am junior web developer and \
+I started learning two years ago.\
+First I started learning basics of java programming language.\
+Long time after that I realized that I was ready for the next step.\
+I started learning algorithms and data structures. \
+After a while, databases came up. The last and current thing I'm learning is spring framework.\
+It is my desire to soon find a practice where I can have a mentor to advise and guide me. \
+Here are links to all the books and courses I have attended."
+let i = 0;
+let speed = 50;
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("about_text").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+$(window).resize(function() {
+	if($(window).width() > 600){
+		$('.closebtn').css('display','none');
+		$('#hamburger').css('display','none');
+			openNav();
+	} else {
+		$('.closebtn').css('display','block');
+		$('#hamburger').css('display','block');
+			closeNav();
+	}
+});
+
+function openNav() {
+  $('#mySidenav').css('width','30vw');
+}
+
+function closeNav() {
+ $('#mySidenav').css('width',0);
+}
+
+function showPage(id) {
+	let days = document.getElementsByClassName("pages");
+	for( let j = 0; j < days.length; j++ ){
+		if(id===days[j]){
+    days[j].style.width = "70vw";   
+		} else {
+			days[j].style.width = "0"; 
+		}	
+	}
+}
+function playAnim(){
+  let el = document.getElementById('my_image');
+  el.style.animation = 'none';
+  el.offsetHeight; /* trigger reflow */
+  el.style.animation = null; 
+}
+
+window.onload = function () {
+  $('#home_text').css('width','70vw');
+	if($(window).width() > 600){
+		$('.closebtn').css('display','none');
+		$('#hamburger').css('display','none');
+		openNav();
+	}
+}
+	</script>
 	<body>
 		<header>
 			<nav>
@@ -125,78 +198,5 @@
 						<span id="mail"> Mail 	  &nbsp;  &nbsp;  &nbsp; <a href="mailto:vujaaa88@hotmail.com"><i class="far fa-envelope"></i></a></span>
 			</article>
 		</section>
-	<script>
-	
-function writeText() {
-	document.getElementById("about_text").innerText = "";
-	i=0;
-	speed = 50;
-		if(document.getElementById("about").style.width === "70vw"){
-			typeWriter();
-		} 
-}	
-
-var txt = "Hi, My name is Bojan Vujnovic, I am junior web developer and \
-I started learning two years ago.\
-First I started learning basics of java programming language.\
-Long time after that I realized that I was ready for the next step.\
-I started learning algorithms and data structures. \
-After a while, databases came up. The last and current thing I'm learning is spring framework.\
-It is my desire to soon find a practice where I can have a mentor to advise and guide me. \
-Here are links to all the books and courses I have attended."
-var i = 0;
-var speed = 50;
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("about_text").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-$(window).resize(function() {
-	if($(window).width() > 600){
-	document.getElementsByClassName("closebtn")[0].style.display = "none";
-	document.getElementById("hamburger").style.display = "none";
-	openNav();
-} else {
-document.getElementsByClassName("closebtn")[0].style.display = "block";
-document.getElementById("hamburger").style.display = "block";
-closeNav();
-}
-});
-if($(window).width() > 600){
-document.getElementsByClassName("closebtn")[0].style.display = "none";
-document.getElementById("hamburger").style.display = "none";
-	openNav();
-} 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "30vw";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-function showPage(id) {
-	var days = document.getElementsByClassName("pages");
-	for( var i = 0; i < days.length; i++ ){
-		if(id===days[i]){
-    days[i].style.width = "70vw";   
-		} else {
-			days[i].style.width = "0"; 
-		}	
-	}
-}
-function playAnim(){
-  var el = document.getElementById('my_image');
-  el.style.animation = 'none';
-  el.offsetHeight; /* trigger reflow */
-  el.style.animation = null; 
-}
-
-window.onload = function () {
-  document.getElementById("home_text").style.width = "70vw";
-}
-		</script>
 	</body>
 </html>
